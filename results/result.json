@@ -1,0 +1,29 @@
+{
+  "dataset": "assist2009",
+  "model": "asikt_official",
+  "fold": 0,
+  "seed": 42,
+  "protocol": "native_pykt_question_window",
+  "evaluation_chain": "evaluate_question -> group_fusion -> effective_fusion -> late_fusion",
+  "windowauclate_mean": 0.7815264027514466,
+  "windowacclate_mean": 0.7362824086448508,
+  "windowaucconcepts": 0.7697830756768421,
+  "windowaccconcepts": 0.7304870560098251,
+  "independent_windowauclate_mean": 0.7815264027514466,
+  "independent_windowacclate_mean": 0.7362824086448508,
+  "testauc": 0.843463566709963,
+  "testacc": 0.7766218661152753,
+  "window_testauc": 0.8453700188392371,
+  "window_testacc": 0.7779980657640232,
+  "best_epoch": 6,
+  "best_valid": {
+    "auc": 0.8507974631872273,
+    "accuracy": 0.7878277330809276,
+    "log_loss": 0.4312598220118393,
+    "loss_sum": 22781.300201416016
+  },
+  "training_seconds": 881.2678503990173,
+  "question_window_rows": 61882,
+  "checkpoint": "E:\\StudyWork\\sota_kt_lab\\work\\asikt_official_20261030\\assist2009_fold0_seed42\\qid_best.ckpt",
+  "gpu_peak_memory_bytes": 3681902592
+}

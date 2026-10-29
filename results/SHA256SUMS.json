@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "algorithm": "SHA256",
+  "run_directory": "E:\\StudyWork\\sota_kt_lab\\work\\asikt_official_20261030\\assist2009_fold0_seed42",
+  "files": [
+    {
+      "file": "REPRODUCTION.md",
+      "bytes": 4977,
+      "sha256": "2ba87f42a70929135eb42ae963cae3ee62191b16126f42da1335b90398aadaca"
+    },
+    {
+      "file": "run_manifest.json",
+      "bytes": 4420,
+      "sha256": "4a8302ef2006770a10e90dee6f846e3fea32fa59a988efcadeecf72f1ab99c1e"
+    },
+    {
+      "file": "result.json",
+      "bytes": 1095,
+      "sha256": "3c602bb35904247107bb2dec9d7282b987ef9df58923379f74780eac6b45e4d5"
+    },
+    {
+      "file": "training_history.json",
+      "bytes": 3210,
+      "sha256": "b2f974f871ea233d8e41d9820827c7ddba1367caf9a1c2b69c1959f9f137c72c"
+    },
+    {
+      "file": "qid_best.ckpt",
+      "bytes": 72623949,
+      "sha256": "3d17d500d19bb8643eaeb2d68002aed2cab3e0d2c8658405cbe74c9afe2aad27"
+    },
+    {
+      "file": "asikt_priors.pt",
+      "bytes": 144760,
+      "sha256": "e2660b1fec5a4c8d69dcab1242850f8d638333779670ac4c3a358128ef23ab6c"
+    },
+    {
+      "file": "test_question_window_arrays.npz",
+      "bytes": 317273,
+      "sha256": "63c3af8221585a73c85d1a9311eb851ca18c2074c95f86718be6332d43915bf8"
+    },
+    {
+      "file": "qid_test_question_window_predictions.txt",
+      "bytes": 3935432,
+      "sha256": "89013a5f8816fe47fa54b99637bbd9520904da29e1021a013a31823737671dce"
+    },
+    {
+      "file": "qid_test_predictions.txt",
+      "bytes": 2309002,
+      "sha256": "7efce6c9e667b1d8d2c6ce9aab3dc1cd0e076fdaf9e2a2ada3d2643b5d655240"
+    },
+    {
+      "file": "qid_test_window_predictions.txt",
+      "bytes": 29575622,
+      "sha256": "3131324a51b2b26c75ad4cf8de74a466adfbafde105789873dc857b990449206"
+    },
+    {
+      "file": "train_console.log",
+      "bytes": 4121830,
+      "sha256": "3668605013a26412862f0e5157f067ad03f6e35af448412bb141ff806165cd6a"
+    }
+  ],
+  "official_source": [
+    {
+      "file": "ASIKT.py",
+      "sha256": "9bdbdbb0cbd66576653798f3356bb25ad3976083f3a223981afc3cdd0704bb86"
+    },
+    {
+      "file": "data_pre.py",
+      "sha256": "57e1e44fbc32fb718c5299ad422eb598605a82ce95dcacc109466265baf4f48a"
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    },
+    {
+      "file": "main.py",
+      "sha256": "84a5162584cee7b4a31791d9f4cb4936dcb3731ce1b2f7124e5334f81489748c"
+    },
+    {
+      "file": "README.md",
+      "sha256": "cb9c030d9ed2e59c9b4ebe5ab942bf4ad5e5a994faef56c5f079e6c3f02641a5"
+    },
+    {
+      "file": "transformer.py",
+      "sha256": "283c69e6dd63b5be466b50967a1f317a1ed0ffa832ada028bbf9725a47d26be5"
+    },
+    {
+      "file": "mamba2.py",
+      "sha256": "ced19be727a107b5e2526ec89f05892f5b73b2f0a63517cfff9c12f18cc59c0d"
+    },
+    {
+      "file": "run.py",
+      "sha256": "45cc7736bcbd884470b59c82a5c96590c4214f0e8fe41bc769c904ef3d88a112"
+    }
+  ],
+  "same_protocol_comparison": {
+    "file": "E:\\StudyWork\\sota_kt_lab\\pykt-toolkit\\examples\\r31609_full_f0_s42\\metrics.json",
+    "bytes": 842,
+    "sha256": "7098beeda59ae4ab0981fd3e654e262624c0d519f6a663b585450c1ec1b1c58b"
+  }
+}

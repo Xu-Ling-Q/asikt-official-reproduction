@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T16:32:13.710929+00:00",
+  "dataset": "assist2009",
+  "model": "asikt_official",
+  "fold": 0,
+  "seed": 42,
+  "official_release": {
+    "url": "https://github.com/mrsser/ASIKT",
+    "commit": "db8eb4cac6bcf9138b2179e8f279b93a49de2832",
+    "source_dir": "E:\\StudyWork\\sota_kt_lab\\pykt-toolkit\\pykt\\models\\asikt_official_source",
+    "sha256": {
+      "ASIKT.py": "9bdbdbb0cbd66576653798f3356bb25ad3976083f3a223981afc3cdd0704bb86",
+      "data_pre.py": "57e1e44fbc32fb718c5299ad422eb598605a82ce95dcacc109466265baf4f48a",
+      "LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "main.py": "84a5162584cee7b4a31791d9f4cb4936dcb3731ce1b2f7124e5334f81489748c",
+      "README.md": "cb9c030d9ed2e59c9b4ebe5ab942bf4ad5e5a994faef56c5f079e6c3f02641a5",
+      "transformer.py": "283c69e6dd63b5be466b50967a1f317a1ed0ffa832ada028bbf9725a47d26be5",
+      "mamba2.py": "ced19be727a107b5e2526ec89f05892f5b73b2f0a63517cfff9c12f18cc59c0d",
+      "run.py": "45cc7736bcbd884470b59c82a5c96590c4214f0e8fe41bc769c904ef3d88a112"
+    }
+  },
+  "protocol": {
+    "training": "official ASIKT loss, optimizer, architecture and early stopping",
+    "validation_checkpoint": "validation AUC",
+    "question_window": "pykt evaluate_question -> group_fusion -> late_fusion",
+    "reported_metric": "windowauclate_mean"
+  },
+  "hyperparameters": {
+    "batch_size": 32,
+    "num_epochs": 300,
+    "learning_rate": 0.0005,
+    "early_stopping_patience": 7,
+    "d_model": 128,
+    "dropout": 0.2,
+    "n_blocks": 2,
+    "rasch": 1,
+    "final_fc_dim": 512,
+    "n_heads": 8,
+    "d_ff": 1024,
+    "theta": 0.5
+  },
+  "prior_source": {
+    "folds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "train_sequences": 3016,
+    "validation_sequences_excluded": 741,
+    "sha256": "2ec707dabc943541820f13a0b8c734c6b3a445dad560dab3702fc0449fc7d856"
+  },
+  "data_files": {
+    "train_valid_sequences.csv": {
+      "path": "E:\\StudyWork\\sota_kt_lab\\pykt-toolkit\\data\\assist2009_corrected_collapsed\\train_valid_sequences.csv",
+      "bytes": 11027472,
+      "sha256": "61ea4654cf34a8dc1f4e813cd7274e80bd44172fb3b922a2ea57dca9e1cf208e"
+    },
+    "test_sequences.csv": {
+      "path": "E:\\StudyWork\\sota_kt_lab\\pykt-toolkit\\data\\assist2009_corrected_collapsed\\test_sequences.csv",
+      "bytes": 3379824,
+      "sha256": "71360988fe720d3eb263f381c4670d8bb723d2c51d3741d4d4a9d3f4c7b14266"
+    },
+    "test_question_window_sequences.csv": {
+      "path": "E:\\StudyWork\\sota_kt_lab\\pykt-toolkit\\data\\assist2009_corrected_collapsed\\test_question_window_sequences.csv",
+      "bytes": 159786706,
+      "sha256": "26cc650b450c40547c5df68d0a7e944f462bb90750634b7f71f4f54abb1d2b86"
+    }
+  },
+  "environment": {
+    "python": "3.10.18 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:08:55) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.2.0",
+    "numpy": "1.26.4",
+    "cuda": "11.8",
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "capability": [
+        8,
+        6
+      ],
+      "total_memory_bytes": 6441926656
+    }
+  },
+  "protocol_scope": {
+    "name": "project unified AS09 fold 0",
+    "sequence_source": "assist2009_corrected_collapsed",
+    "fold_0_train_sequences": 3016,
+    "fold_0_validation_sequences": 741,
+    "test_sequences": 904,
+    "num_questions": 17737,
+    "num_concepts": 123,
+    "max_sequence_length": 200,
+    "uses_author_embedded_as09_split": false,
+    "interpretation": "Official ASIKT source and training logic evaluated on the project's unified AS09 sequences; this is not the score on the author's embedded AS09 split."
+  },
+  "deviations": [
+    {
+      "parameter": "batch_size",
+      "official_default": 48,
+      "used": 32,
+      "reason": "The initial 48-sequence batch attempt exhausted memory on the 6 GB NVIDIA RTX 3060 Laptop GPU. The 48-batch attempt was not persisted as a separate log; the reported run is the successful batch-32 run."
+    }
+  ],
+  "verification": {
+    "official_source_files_byte_identical": true,
+    "official_priors_cross_checked": true,
+    "question_window_independent_recompute": "exact match with native pyKT",
+    "audit_tests": "pytest tests/test_asikt_official.py -q: 4 passed",
+    "artifact_checksums_file": "SHA256SUMS.json"
+  }
+}
